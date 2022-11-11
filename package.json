@@ -1,9 +1,9 @@
 {
-   "name": "enmity-bot",
+   "name": "backend",
    "version": "1.0.0",
    "author": "eternal",
    "license": "Unlicensed",
-   "description": "Discord bot to manage the Enmity server.",
+   "description": "External API & Discord bot for Enmity.",
    "main": "dist/preload.js",
    "scripts": {
       "dev:build": "nodemon",
