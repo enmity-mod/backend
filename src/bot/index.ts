@@ -1,4 +1,4 @@
-import Client from '@structures/client';
+import Client from '@bot/structures/client';
 
 // Load all events
 require('./events');

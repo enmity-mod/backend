@@ -1,9 +1,9 @@
-import { MongoClient } from 'mongodb';
 import { createLogger } from './logger';
+import { MongoClient } from 'mongodb';
 
 class Database {
    client = new MongoClient(process.env.DB_URL!);
-   logger = createLogger('Database', 'Client');
+   logger = createLogger('Database');
 
    async connect() {
       this.logger.debug('Attempting to connect to the database...');

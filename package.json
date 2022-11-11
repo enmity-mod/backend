@@ -4,7 +4,7 @@
    "author": "eternal",
    "license": "Unlicensed",
    "description": "Discord bot to manage the Enmity server.",
-   "main": "dist/index.js",
+   "main": "dist/preload.js",
    "scripts": {
       "dev:build": "nodemon",
       "dev:run": "nodemon --exec \"node .\" --delay 0.250",

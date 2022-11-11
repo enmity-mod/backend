@@ -1,7 +1,7 @@
 import { InteractionCommandClient } from 'detritus-client';
-import { createLogger } from '@structures/logger';
-import Database from '@structures/database';
+import { createLogger } from '@logger';
 import { ClientOptions } from '@constants';
+import path from 'path';
 
 class Client extends InteractionCommandClient {
    logger = createLogger('Discord', 'Client');
@@ -13,10 +13,11 @@ class Client extends InteractionCommandClient {
    async init() {
       try {
          this.logger.debug('Registering commands...');
-         this.addMultipleIn('commands');
-         this.logger.info('Commands registered.');
 
-         await Database.connect();
+         const commands = path.resolve(__dirname, '..', 'commands');
+         this.addMultipleIn(commands, { isAbsolute: true });
+
+         this.logger.info('Commands registered.');
 
          this.logger.debug('Attempting to connect to the gateway...');
          await this.run();

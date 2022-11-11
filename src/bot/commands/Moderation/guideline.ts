@@ -2,8 +2,8 @@ import { ApplicationCommandOptionTypes, MessageFlags } from 'detritus-client/lib
 import { codeblock } from 'detritus-client/lib/utils/markup';
 import { Embed } from 'detritus-client/lib/utils';
 import { Interaction } from 'detritus-client';
-import Database from '@structures/database';
 import { Colors } from '@constants';
+import Database from '@db';
 
 export interface Arguments {
    number: number;

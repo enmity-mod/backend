@@ -1,4 +1,9 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import Database from '@db';
 
-require('./init');
+Database.connect().then(() => {
+   // Start bot
+   require('./bot');
+
+   // Start API
+   require('./api');
+});

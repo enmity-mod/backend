@@ -28,6 +28,9 @@ export const ClientOptions: InteractionCommandClientOptions = {
 };
 
 export const Paths = {
-   Commands: path.resolve(__dirname, 'commands'),
-   Root: __dirname
+   Bot: {
+      Commands: path.resolve(__dirname, '..', 'bot', 'commands')
+   },
+   Root: path.resolve(__dirname, '..', '..'),
+   Source: path.resolve(__dirname, '..')
 };

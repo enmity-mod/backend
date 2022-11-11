@@ -20,11 +20,20 @@
       ],
       "baseUrl": "src",
       "paths": {
-         "@structures/*": [
-            "structures/*"
+         "@db": [
+            "common/structures/database.ts"
          ],
          "@constants": [
-            "constants.ts"
+            "common/constants.ts"
+         ],
+         "@logger": [
+            "common/structures/logger.ts"
+         ],
+         "@bot/*": [
+            "bot/*"
+         ],
+         "@common/*": [
+            "common/*"
          ]
       }
    }
