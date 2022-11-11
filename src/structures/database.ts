@@ -3,7 +3,7 @@ import { createLogger } from './logger';
 
 class Database {
    client = new MongoClient(process.env.DB_URL!);
-   logger = createLogger('Database');
+   logger = createLogger('Database', 'Client');
 
    async connect() {
       this.logger.debug('Attempting to connect to the database...');

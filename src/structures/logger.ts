@@ -17,6 +17,8 @@ export function warn(...args: string[]): void {
 }
 
 export function debug(...args: string[]): void {
+   if (!~process.argv.indexOf('--debug')) return;
+
    return console.debug('»'.gray, ...args);
 }
 

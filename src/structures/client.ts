@@ -4,7 +4,7 @@ import Database from '@structures/database';
 import { ClientOptions } from '@constants';
 
 class Client extends InteractionCommandClient {
-   logger = createLogger('Client');
+   logger = createLogger('Discord', 'Client');
 
    constructor() {
       super(process.env.TOKEN!, ClientOptions);
