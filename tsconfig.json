@@ -1,0 +1,31 @@
+{
+   "exclude": [
+      "typings",
+      "node_modules"
+   ],
+   "compilerOptions": {
+      "skipLibCheck": true,
+      "checkJs": false,
+      "forceConsistentCasingInFileNames": true,
+      "experimentalDecorators": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "module": "CommonJS",
+      "target": "esnext",
+      "jsx": "preserve",
+      "lib": [
+         "ESNext",
+         "DOM"
+      ],
+      "baseUrl": "src",
+      "paths": {
+         "@structures/*": [
+            "structures/*"
+         ],
+         "@constants": [
+            "constants.ts"
+         ]
+      }
+   }
+}
