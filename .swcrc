@@ -1,46 +1,52 @@
 {
-   "$schema": "https://json.schemastore.org/swcrc",
-   "module": {
-      "type": "commonjs"
-   },
-   "sourceMaps": false,
-   "minify": true,
-   "jsc": {
-      "externalHelpers": false,
-      "parser": {
-         "syntax": "typescript",
-         "tsx": true,
-         "decorators": true,
-         "dynamicImport": true,
-         "topLevelAwait": true
-      },
-      "target": "es2022",
-      "minify": {
-         "compress": true,
-         "mangle": true
-      },
-      "transform": {
-         "optimizer": {
-            "simplify": true
-         }
-      },
-      "baseUrl": "src",
-      "paths": {
-         "@db": [
-            "common/structures/database.ts"
-         ],
-         "@constants": [
-            "common/constants.ts"
-         ],
-         "@logger": [
-            "common/structures/logger.ts"
-         ],
-         "@bot/*": [
-            "bot/*"
-         ],
-         "@common/*": [
-            "common/*"
-         ]
+  "$schema": "https://json.schemastore.org/swcrc",
+  "module": {
+    "type": "commonjs"
+  },
+  "sourceMaps": false,
+  "minify": true,
+  "jsc": {
+    "externalHelpers": false,
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true,
+      "decorators": true,
+      "dynamicImport": true,
+      "topLevelAwait": true
+    },
+    "target": "es2022",
+    "minify": {
+      "compress": true,
+      "mangle": true
+    },
+    "transform": {
+      "optimizer": {
+        "simplify": true
       }
-   }
+    },
+    "baseUrl": "src",
+    "paths": {
+      "@db": [
+        "common/structures/database.ts"
+      ],
+      "@constants": [
+        "common/constants.ts"
+      ],
+      "@logger": [
+        "common/structures/logger.ts"
+      ],
+      "@bot/*": [
+        "bot/*"
+      ],
+      "@api/*": [
+        "api/*"
+      ],
+      "@common/*": [
+        "common/*"
+      ],
+      "@typings/*": [
+        "../types/*"
+      ]
+    }
+  }
 }

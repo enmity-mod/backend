@@ -4,4 +4,4 @@ import Client from '@bot/structures/client';
 require('./events');
 
 // Initialize client
-Client.init();
+Client.initialize();

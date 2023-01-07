@@ -1,6 +1,5 @@
-import { ClientEvents } from 'detritus-client/lib/constants';
-import Client from '@bot/structures/client';
+import client from '@bot/structures/client';
 
-Client.gateway.subscribe(ClientEvents.READY, () => {
-   Client.logger.success('Gateway connected, the bot is online.');
+client.on('ready', () => {
+  client.logger.success('Connected to the gateway.');
 });

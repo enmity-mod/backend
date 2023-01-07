@@ -1,9 +1,9 @@
 import Database from '@db';
 
 Database.connect().then(() => {
-   // Start bot
-   require('./bot');
+  // Start bot
+  require('./bot');
 
-   // Start API
-   require('./api');
+  // Start API
+  require('./api');
 });

@@ -1,40 +1,46 @@
 {
-   "exclude": [
-      "typings",
-      "node_modules"
-   ],
-   "compilerOptions": {
-      "skipLibCheck": true,
-      "checkJs": false,
-      "forceConsistentCasingInFileNames": true,
-      "experimentalDecorators": true,
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "module": "CommonJS",
-      "target": "esnext",
-      "jsx": "preserve",
-      "lib": [
-         "ESNext",
-         "DOM"
+  "exclude": [
+    "typings",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "checkJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@db": [
+        "common/structures/database.ts"
       ],
-      "baseUrl": "src",
-      "paths": {
-         "@db": [
-            "common/structures/database.ts"
-         ],
-         "@constants": [
-            "common/constants.ts"
-         ],
-         "@logger": [
-            "common/structures/logger.ts"
-         ],
-         "@bot/*": [
-            "bot/*"
-         ],
-         "@common/*": [
-            "common/*"
-         ]
-      }
-   }
+      "@constants": [
+        "common/constants.ts"
+      ],
+      "@logger": [
+        "common/structures/logger.ts"
+      ],
+      "@bot/*": [
+        "bot/*"
+      ],
+      "@api/*": [
+        "api/*"
+      ],
+      "@common/*": [
+        "common/*"
+      ],
+      "@typings/*": [
+        "../types/*"
+      ]
+    }
+  }
 }
