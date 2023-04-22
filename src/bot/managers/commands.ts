@@ -4,7 +4,6 @@ import glob from 'fast-glob';
 import path from 'path';
 import fs from 'fs';
 
-
 class Commands {
   public logger = createLogger('Client', 'Manager', 'Commands');
   public path = path.join(__dirname, '..', 'commands');
@@ -52,19 +51,19 @@ class Commands {
     this.logger.info(`Loaded ${this.store.size} commands.`);
   }
 
-  get(name: string, searchAliases: boolean = true): Command {
+  get(name: string, aliases: boolean = true): Command {
     if (this.store.has(name)) {
       return this.store.get(name);
     }
 
-    if (!searchAliases) return;
+    if (!aliases) return;
 
     const commands = this.getAll();
 
     return commands.find(c => ~c.aliases.indexOf(name));
   }
 
-  getAll() {
+  getAll(): Command[] {
     return [...this.store.values()];
   }
 

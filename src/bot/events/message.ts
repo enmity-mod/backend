@@ -14,6 +14,13 @@ client.on('messageCreate', (msg) => {
   if (!instance) return;
 
   try {
+    const predicate = instance.predicate(msg, args);
+    if (!predicate) return;
+  } catch (e) {
+    return client.commands.logger.error(`${command} predicate failed to run.`, ' \n -', e.message);
+  }
+
+  try {
     instance.run(msg, args);
   } catch (e) {
     console.error(e);

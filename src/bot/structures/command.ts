@@ -9,6 +9,10 @@ class Command {
   run(message: Message, args: string[]): any {
 
   }
+
+  predicate(message: Message, args: string[]): boolean {
+    return true;
+  }
 }
 
 export default Command;

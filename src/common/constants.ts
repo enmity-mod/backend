@@ -5,15 +5,18 @@ import path from 'path';
 
 export const Colors = {
   Brand: 4406700
-};
+} as const;
+
 
 export const Channels = {
   FAQ: '1033951806159605780'
-};
+} as const;
+
 
 export const Links = {
   Patreon: 'https://patreon.com/enmityapp'
-};
+} as const;
+
 
 export const Paths = {
   Root: path.resolve(__dirname, '..', '..'),
@@ -21,7 +24,8 @@ export const Paths = {
   Bot: {
     Commands: path.resolve(__dirname, '..', 'bot', 'commands')
   }
-};
+} as const;
+
 
 export const Options = {
   API: {
@@ -34,7 +38,8 @@ export const Options = {
     intents: [
       GatewayIntentBits.Guilds,
       GatewayIntentBits.GuildMessages,
-      GatewayIntentBits.MessageContent
+      GatewayIntentBits.MessageContent,
+      GatewayIntentBits.GuildMembers
     ],
     presence: {
       activities: [
@@ -46,5 +51,17 @@ export const Options = {
       status: 'idle'
     }
   } as ClientOptions
-};
+} as const;
 
+
+export const Emotes = {
+  sucess: '<:success:816413306453098516>',
+  error: '<:error:816413456038232074>'
+} as const;
+
+export enum Roles {
+  Developer = '961789343146577973',
+  Staff = '950850582984392704',
+  Supporter = '997233808522874910',
+  Contributor = '967799585844113418'
+};

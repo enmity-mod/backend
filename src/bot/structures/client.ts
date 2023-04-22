@@ -1,17 +1,20 @@
-import Commands from '@bot/managers/commands';
 import { Options } from '@common/constants';
 import { createLogger } from '@logger';
 import { Client } from 'discord.js';
 
+import Infractions from '@bot/managers/infractions';
+import Commands from '@bot/managers/commands';
+
 export default new class extends Client {
   logger = createLogger('Client');
+  infractions = new Infractions();
   commands = new Commands();
 
   constructor() {
     super(Options.Bot);
   }
 
-  initialize() {
-    this.login(process.env.BOT_TOKEN);
+  async initialize() {
+    await this.login(process.env.BOT_TOKEN);
   }
 };

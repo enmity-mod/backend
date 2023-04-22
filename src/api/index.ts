@@ -1,11 +1,14 @@
 import { router } from 'express-file-routing';
 import type { AddressInfo } from 'net';
 import { createLogger } from '@logger';
+import { json } from 'body-parser';
 import express from 'express';
 import path from 'path';
 
 const Logger = createLogger('Server', 'API');
 const server = express();
+
+server.use(json());
 
 server.use('/', router({
   directory: path.resolve(__dirname, 'routes')
